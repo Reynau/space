@@ -18,6 +18,7 @@ for(var i=0; i<100; i++) {
   var s = new PIXI.Sprite(texture);
   s.position.x = Math.random() * renderer.width;
   s.position.y = Math.random() * renderer.height;
+  s.alpha = Math.random();
   stars.push(s);
   stage.addChild(s);
 }
