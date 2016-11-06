@@ -14,7 +14,7 @@ graphics.endFill();
 texture.render(graphics);
 
 var stars = [];
-for(var i=0; i<100; i++) {
+for(var i=0; i<700; i++) {
   var s = new PIXI.Sprite(texture);
   s.position.x = Math.random() * renderer.width;
   s.position.y = Math.random() * renderer.height;
@@ -28,5 +28,11 @@ requestAnimationFrame(animate);
 
 function animate() {
   requestAnimationFrame( animate );
+  var time = Date.now() / 1000;
+  var PI = 3.1416;
+  for (var i=0; i < 700; ++i) {
+    var s = stars[i];
+    s.alpha = Math.sin(time + i * 100);
+  }
   renderer.render(stage);
 }
