@@ -3,8 +3,8 @@ Space is a canvas animated background working with PIXI.js to make your webpages
 
 ## How to use it:
 
-- Include PIXI.js library on your webpage.
-- Include the space.js file in your page body.
+- Include [PixiJS](http://www.pixijs.com/) library on your webpage.
+- Include the [space.js](https://github.com/Reynau/space/blob/master/space.js) file in your page body.
 - Add this CSS to do canvas full size and acting as a background:
 ```css
 canvas {
