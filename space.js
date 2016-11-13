@@ -13,12 +13,16 @@ graphics.drawCircle(8, 8, 1);
 graphics.endFill();
 texture.render(graphics);
 
+var numStars = 1000;
 var stars = [];
-for(var i=0; i<700; i++) {
+for(var i=0; i<numStars; i++) {
   var s = new PIXI.Sprite(texture);
+  var scale = Math.random() * 2;
   s.position.x = Math.random() * renderer.width;
   s.position.y = Math.random() * renderer.height;
   s.alpha = Math.random();
+  s.scale.x = scale;
+  s.scale.y = scale;
   stars.push(s);
   stage.addChild(s);
 }
@@ -29,10 +33,11 @@ requestAnimationFrame(animate);
 function animate() {
   requestAnimationFrame( animate );
   var time = Date.now() / 1000;
-  var PI = 3.1416;
-  for (var i=0; i < 700; ++i) {
+  for (var i=0; i < numStars; ++i) {
     var s = stars[i];
-    s.alpha = Math.sin(time + i * 100);
+    var freq = i/numStars;
+    var ampl = i*numStars;
+    s.alpha = freq * Math.sin(time + ampl);
   }
   renderer.render(stage);
 }
