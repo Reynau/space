@@ -1,5 +1,5 @@
 # Space
-Space is a canvas animated background working with PIXI.js to make your webpages cooler than they are now!
+Space is a canvas animated background working with PIXI.js to make your webpages look cool! :v:
 
 ## How to use it:
 
