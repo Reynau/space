@@ -20,5 +20,5 @@ canvas {
 
 ## Things to do:
 - [x] Animate stars
-- [ ] Different sparkling frequency for each star
+- [x] Different sparkling frequency for each star
 - [ ] Shooting stars
