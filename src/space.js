@@ -1,6 +1,7 @@
 var renderer = PIXI.autoDetectRenderer(1920, 1080, { antialias: true });
 renderer.view.style.width = "100%";
 renderer.view.style.height = "100%";
+renderer.backgroundColor = "0x02020F";
 document.body.appendChild(renderer.view);
 
 var stage = new PIXI.Container();
